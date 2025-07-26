@@ -1,0 +1,385 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Wix Madefor Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+
+header {
+  padding: 0 0 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logobox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logobox img {
+  object-fit: contain;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.herosection {
+  background-image: url(YLtUih.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logobox h3 {
+  font-family: "Wix Madefor Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lists {
+  font-family: "Wix Madefor Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lists a {
+  text-decoration: none;
+  color: black;
+}
+
+.lists a:hover {
+  color: rgb(196, 196, 196);
+  text-decoration: underline;
+}
+
+.herobox {
+  padding: 15px;
+  position: relative;
+  top: 15vh;
+  left: 5%;
+  background-color: white;
+  width: 350px;
+  height: 400px;
+}
+
+.maintxt {
+  font-family: "Wix Madefor Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 39px;
+  padding-left: 15px;
+}
+
+.herobox p {
+  font-family: "Wix Madefor Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0 15px;
+}
+
+.herobox a {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  padding: 15px;
+}
+
+.but1 {
+  position: relative;
+  top: 15%;
+  padding: 10px 20px;
+  border-radius: 45px;
+  background: none;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.but1:hover {
+  background-color: black;
+  color: white;
+}
+
+.imgg2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: right;
+}
+
+.imgg2 img {
+  height: 100vh;
+  width: 50vw;
+  object-fit: cover;
+}
+
+.sticker {
+  position: absolute;
+  top: 125%;
+  left: 25%;
+  width: 40%;
+  height: 400px;
+  background-color: rgb(241, 241, 241);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  text-align: center;
+  padding-top: 15px;
+  object-fit: contain;
+}
+
+.sticker p {
+  position: relative;
+  top: 10%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  padding: 0 70px;
+}
+
+.aboutme {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme {
+  position: relative;
+  top: 50vh;
+  text-align: center;
+  margin-bottom: 50vh;
+  padding-bottom: 50vh;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.gridbox {
+  width: 90vw;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  margin: 20px auto;
+}
+
+
+.gtxt {
+  grid-column: span 3;
+  grid-row: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 {
+  background-image: url(YLtUih.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.h1 {
+  text-align: left;
+  font-size: 36px;
+  padding: 0 25px;
+}
+
+.p {
+  text-align: center;
+  font-size: 16px;
+  padding: 0 25px;
+}
+
+.a {
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.details {
+  position: relative;
+  top: 90%;
+  left: 5%;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.contact {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .sticker {
+    width: 50%;
+    left: 15%;
+  }
+  
+  .gridbox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .gtxt {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav ul {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .herobox {
+    width: 80%;
+    left: 10%;
+    height: 40%;
+    padding-bottom: 30px;
+  }
+  
+  .imgg2 {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .imgg2 img {
+    width: 100%;
+    height: 40%;
+  }
+  
+  .sticker {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top: 0;
+    margin-top: -50px;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .gridbox {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    margin: 30px auto;
+  }
+  
+  .gtxt {
+    grid-column: span 2;
+    grid-row: span 1;
+    padding: 20px;
+  }
+  
+  .aboutme {
+    top: 0;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .herobox {
+    top: 10vh;
+    height: 45%;
+  }
+  
+  .maintxt {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  
+  .gridbox {
+    grid-template-columns: 1fr;
+  }
+  
+  .gtxt, .img1 {
+    grid-column: span 1;
+  }
+  
+  .h1 {
+    font-size: 28px;
+  }
+  
+  .contact {
+    font-size: 2rem;
+  }
+  
+  .sticker p {
+    padding: 0 20px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  nav ul {
+    gap: 0.8rem;
+    font-size: 14px;
+  }
+  
+  .herobox {
+    width: 90%;
+    left: 5%;
+  }
+  
+  .maintxt {
+    font-size: 24px;
+  }
+  
+  .but1 {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

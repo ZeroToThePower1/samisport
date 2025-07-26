@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mathgame</title>
+        <link rel="stylesheet" href="pro2.css">
+    </head>
+    <body>
+        <h1 class="tle">mathgame.py</h1>
+        <div class="box1">
+            <h2>Description</h2>
+            <h2 class="h2h">Math Quiz Game (Console-based)</h2>
+            <p class="para1">This Python script runs an infinite arithmetic quiz in the console, where the user is repeatedly asked to solve randomly generated math problems involving addition (+), subtraction (-), or multiplication (*). It works like this:</p>
+            <h2 class="h21h">Main Flow:</h2>
+            <h3 class="h31h">Question Generation:</h3>
+            <p class="para2">If the previous input was valid (answered = True), the program generates a new math problem using two random numbers between 1 and 100 and a random operator from +, -, or *.</p>
+            <h3 class="h32h">User Input:</h3>
+            <p class="para3">It displays the equation (e.g., 45 + 17 = ?) and asks the user to type in the answer.</p>
+            <h3 class="h33h">Answer Checking:</h3>
+            <p class="para4">The user’s input is converted to a float.If it matches the correct result, the program: Prints “Correct” Increases the score by 1 If incorrect, it shows the correct answer.</p>
+            <h3 class="h34h">Error Handling:</h3>
+            <p class="para5">If the input is not a valid number (like letters or blank), the program prints an error and repeats the same question.</p>
+            <h3 class="h34h">Score Tracking:</h3>
+            <p class="para6">The user’s score is printed after each correct attempt and accumulates over time.</p>
+            <h3 class="h35h">Features:</h3>
+            <p class="para7">Infinite loop (while True) for continuous play.Error handling using try-except to deal with invalid inputs.Score counter to track the number of correct answers.Keeps asking the same question if invalid input is entered.</p>
+
+        </div>
+        <div class="box2">
+            <h2>Preview</h2>
+            <h3 class="ques" id="q">this your question</h3>
+            <input type="number" placeholder="Enter a number" class="inputbox" id="inputbocsh">
+            <button class="butt" onclick="checkAnswer()">submit</button>
+            <h3 class="r" id="result">result</h3>
+            <a href="mathgame.py" download>
+                <button class="butt2">download file</button>
+            </a>
+
+        </div>
+        <script src="pro2.js"></script>
+    </body>
+</html>
