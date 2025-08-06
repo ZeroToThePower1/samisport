@@ -44,7 +44,7 @@ function showhistory(Rdata, user){
 
 async function receiver() {
     try {
-        let response = await fetch('http://localhost:3000');
+        let response = await fetch('https://server-4zvw.onrender.com');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -82,7 +82,7 @@ async function sender() {
     else {
         if (input) {
             try {
-                const response = await fetch('http://localhost:3000', {
+                const response = await fetch('https://server-4zvw.onrender.com', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -115,4 +115,5 @@ async function sender() {
 document.querySelector('.sendbutton').addEventListener('click', sender);
 document.getElementById('inp').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sender();
+
 });
