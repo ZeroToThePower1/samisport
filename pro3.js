@@ -18,11 +18,11 @@ function showhistory(Rdata, user){
             let box = document.createElement('div')
             Object.assign(uname.style, {
                 color: 'gray',
-                margin: '2px'
+                margin: '3px'
             });
             Object.assign(txt.style, {
                 color: 'black',
-                margin: '2px',
+                margin: '3px',
                 
             });
             Object.assign(box.style, {
@@ -116,3 +116,4 @@ document.querySelector('.sendbutton').addEventListener('click', sender);
 document.getElementById('inp').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sender();
 });
+
