@@ -294,12 +294,13 @@ footer div {
     .inputbox button {
         width: 20%;
         margin: 1px;
-        height: 50%;
+        height: 70%;
     }
     
     #inp {
         width: 60%;
-        height: 50%;
+        height: 70%;
     }
 }
+
 
