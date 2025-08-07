@@ -206,6 +206,8 @@ footer div {
     margin-left: 5px;
 }
 
+/* ... (keep all the existing CSS above the media queries exactly the same) ... */
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
     .topgrid {
@@ -218,6 +220,15 @@ footer div {
 
     .des {
         margin-top: 0;
+    }
+
+    .inputbox button {
+        width: 10%;
+    }
+
+    /* Added for preview section */
+    .cont {
+        height: 70vh;
     }
 }
 
@@ -233,8 +244,9 @@ footer div {
         justify-content: center;
     }
 
-    .preview .div {
-        height: 70vh;
+    /* Modified preview section */
+    .cont {
+        height: 60vh;
     }
 
     .options-container {
@@ -244,7 +256,6 @@ footer div {
 }
 
 @media (max-width: 480px) {
-
     .box {
         padding: 1rem;
     }
@@ -253,12 +264,24 @@ footer div {
         padding: 1rem;
     }
 
-    .preview .div {
-        height: 80vh;
+    /* Modified preview section */
+    .cont {
+        height: 50vh;
     }
 
     .options-container {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: 1fr;
+    }
+    
+    .inputbox button {
+        width: 20%;
+        margin: 1px;
+        height: 50%;
+    }
+    
+    #inp {
+        width: 60%;
+        height: 50%;
     }
 }
