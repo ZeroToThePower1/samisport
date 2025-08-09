@@ -51,7 +51,7 @@ nav ul {
   background-image: url(hero.jpg);
   width: 100vw;
   height: 100vh;
-  background-position: center right;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -384,4 +384,5 @@ nav ul {
   }
 
 }
+
 
