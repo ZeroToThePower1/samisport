@@ -48,7 +48,7 @@ nav ul {
 }
 
 .herosection {
-  background-image: url(YLtUih.jpg);
+  background-image: url(hero.jpg);
   width: 100vw;
   height: 100vh;
   background-position: center center;
@@ -382,4 +382,5 @@ nav ul {
     padding: 8px 16px;
     font-size: 14px;
   }
+
 }
