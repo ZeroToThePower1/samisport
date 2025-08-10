@@ -1,4 +1,4 @@
-const DATE = new Date();
+
 
 function aler() {
     alert("file coming soon");
@@ -11,9 +11,14 @@ let homelist = []
 
 
 function getdate(){
-    const hour = DATE.getHours();
-    const minute = DATE.getMinutes();
-    return `${hour}:${minute}`
+    let DATE = new Date();
+    let hour = DATE.getHours();
+    let minute = DATE.getMinutes();
+    if (minute.length<2){
+        return `${hour}:0${minute}`
+    }else{
+        return `${hour}:${minute}`
+    }
 }
 
 function showhistory(Rdata, user){
@@ -128,6 +133,7 @@ document.querySelector('.sendbutton').addEventListener('click', sender);
 document.getElementById('inp').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sender();
 });
+
 
 
 
