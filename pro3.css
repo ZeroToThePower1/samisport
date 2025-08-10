@@ -282,14 +282,17 @@ footer div {
 
 
     .cont {
-        height: 50vh;
+        height: 50dvh;
     }
 
     .options-container {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: 1fr;
     }
-    
+    .inputbox{
+        min-height: 60px;
+        padding: 5px;
+    }
     .inputbox button {
         width: 20%;
         height: 85%;
@@ -300,3 +303,4 @@ footer div {
         height: 85%;
     }
 }
+
