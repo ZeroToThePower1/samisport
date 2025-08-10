@@ -14,7 +14,7 @@ function getdate(){
     let DATE = new Date();
     let hour = DATE.getHours();
     let minute = DATE.getMinutes();
-    if (minute.length<2){
+    if (minute<10){
         return `${hour}:0${minute}`
     }else{
         return `${hour}:${minute}`
@@ -133,6 +133,7 @@ document.querySelector('.sendbutton').addEventListener('click', sender);
 document.getElementById('inp').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sender();
 });
+
 
 
 
