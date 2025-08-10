@@ -87,6 +87,7 @@ async function sender() {
     if (input && !isNameEntered) {
         isNameEntered = true;
         userName = input;
+        alert("Don't refresh the page or you'll need to enter your name again")
         document.getElementById('inp').placeholder = 'Type...';
         document.getElementById('inp').value = '';
         document.querySelector('.sendbutton').textContent = 'Send';
@@ -133,6 +134,7 @@ document.querySelector('.sendbutton').addEventListener('click', sender);
 document.getElementById('inp').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sender();
 });
+
 
 
 
