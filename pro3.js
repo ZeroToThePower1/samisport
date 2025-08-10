@@ -1,3 +1,5 @@
+const DATE = new Date();
+
 function aler() {
     alert("file coming soon");
 }
@@ -8,38 +10,52 @@ let userName = '';
 let homelist = []
 
 
+function getdate(){
+    const hour = DATE.getHours();
+    const minute = DATE.getMinutes();
+    return `${hour}:${minute}`
+}
+
 function showhistory(Rdata, user){
-    let msgcont = document.querySelector('.msg')
-    msgcont.innerHTML = ''; 
+    emptylist = []
     Rdata.forEach((a)=>{
-        if (!(user.includes(a))){
+        console.log(a )
+        const exists = user.some(item=>item.name===a.name && item.message === a.message && item.timestamp === a.timestamp)
+        if (!exists){
+            emptylist.push(a)
+        }
+    });
+
+    if ( emptylist.length > 0){
+        emptylist.forEach((a)=>{
+            user.push(a)
+        })
+
+        user.forEach((a)=>{
             let uname = document.createElement('h6')
             let txt = document.createElement('h4')
             let box = document.createElement('div')
             Object.assign(uname.style, {
-                color: 'gray',
+                color:'gray',
                 margin: '3px'
             });
-            Object.assign(txt.style, {
-                color: 'black',
-                margin: '3px',
-                
+            Object.assign(txt.style,{
+                color:'black',
+                margin:'3px' 
             });
             Object.assign(box.style, {
-                background: 'none',
-                margin: '5px',
+                background:'none',
+                margin:'5px',
                 border: '1px solid black'
-                
             });
             uname.textContent = a.name
             txt.textContent = a.message
             box.appendChild(uname)
             box.appendChild(txt)
             document.querySelector('.msg').appendChild(box)
-            homelist.push(a)
-        }
-        msgcont.scrollTop = msgcont.scrollHeight;
-    });
+            document.querySelector('.msg').scrollTop = document.querySelector('.msg').scrollHeight
+            })
+    }
 }
 
 async function receiver() {
@@ -49,8 +65,6 @@ async function receiver() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         let newData = await response.json(); 
-        console.log('this is it',typeof(newData));
-        console.log(newData)
         showhistory(newData, homelist)
     } catch (error) {
         console.error("GET Error:", error);
@@ -86,7 +100,7 @@ async function sender() {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        name: userName, 
+                        name: `${userName} • ${getdate()}`, 
                         message: input
                     }),
                 });
@@ -116,4 +130,6 @@ document.querySelector('.sendbutton').addEventListener('click', sender);
 document.getElementById('inp').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sender();
 });
+
+
 
