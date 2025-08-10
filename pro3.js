@@ -28,10 +28,6 @@ function showhistory(Rdata, user){
 
     if ( emptylist.length > 0){
         emptylist.forEach((a)=>{
-            user.push(a)
-        })
-
-        user.forEach((a)=>{
             let uname = document.createElement('h6')
             let txt = document.createElement('h4')
             let box = document.createElement('div')
@@ -54,7 +50,9 @@ function showhistory(Rdata, user){
             box.appendChild(txt)
             document.querySelector('.msg').appendChild(box)
             document.querySelector('.msg').scrollTop = document.querySelector('.msg').scrollHeight
-            })
+            user.push(a)
+        })
+
     }
 }
 
