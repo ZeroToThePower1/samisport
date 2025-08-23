@@ -1,5 +1,3 @@
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -51,7 +49,7 @@ nav ul {
   background-image: url(hero.jpg);
   width: 100vw;
   height: 100vh;
-  background-position: right center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -85,7 +83,7 @@ nav ul {
   position: relative;
   top: 15vh;
   left: 5%;
-  background-color: white;
+  background:  none;
   width: 350px;
   height: 400px;
 }
@@ -98,6 +96,7 @@ nav ul {
   font-size: 36px;
   line-height: 39px;
   padding-left: 15px;
+  color: white;
 }
 
 .herobox p {
@@ -108,6 +107,7 @@ nav ul {
   font-size: 16px;
   line-height: 26px;
   padding: 0 15px;
+  color: white;
 }
 
 .herobox a {
@@ -119,15 +119,31 @@ nav ul {
 
 .but1 {
   position: relative;
-  top: 15%;
+  top: 10%;
   padding: 10px 20px;
   border-radius: 45px;
   background: none;
   border: 1px solid black;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  color: black;
+}
+.but2 {
+  position: relative;
+  top: 10%;
+  padding: 10px 20px;
+  border-radius: 45px;
+  background: none;
+  border: 1px solid white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: white;
 }
 
+.but2:hover{
+  background-color: white;
+  color: black;
+}
 .but1:hover {
   background-color: black;
   color: white;
@@ -155,7 +171,7 @@ nav ul {
   left: 25%;
   width: 40%;
   height: 400px;
-  background-color: rgb(241, 241, 241);
+  background: rgb(246, 246, 246);
   font-weight: 600;
   font-style: normal;
   font-size: 36px;
@@ -199,7 +215,7 @@ nav ul {
   width: 90vw;
   min-height: 90vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
   margin: 20px auto;
 }
@@ -230,7 +246,7 @@ nav ul {
 }
 
 .p {
-  text-align: center;
+  text-align: left;
   font-size: 16px;
   padding: 0 25px;
 }
@@ -384,5 +400,3 @@ nav ul {
   }
 
 }
-
-
